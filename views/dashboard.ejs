@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(to bottom right, #007bff, #00bfff);
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+      .dashboard-container {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      }
+      .logout-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #007bff;
+        color: #ffffff;
+      }
+      .logout-btn:hover {
+        background-color: #0056b3;
+        color: #ffffff;
+      }
+      .welcome-btn {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+      }
+      .welcome-btn:hover {
+        background-color: #0056b3;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/users/logout" class="btn btn-secondary logout-btn">Logout</a>
+    <div class="dashboard-container">
+      <h1 class="mt-4">Dashboard</h1>
+      <p class="lead mb-3">Welcome <%= user.name %></p>
+      <a href="/welcome" class="welcome-btn">Welcome</a>
+    </div>
+  </body>
+</html>
